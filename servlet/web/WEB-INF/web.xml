@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <servlet>
+        <servlet-name>BankServlet</servlet-name>
+        <servlet-class>com.java.training.BankServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BankServlet</servlet-name>
+        <url-pattern>/BankServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ViewServlet</servlet-name>
+        <servlet-class>com.java.training.ViewServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewServlet</servlet-name>
+        <url-pattern>/view</url-pattern>
+    </servlet-mapping>
+
+</web-app>
