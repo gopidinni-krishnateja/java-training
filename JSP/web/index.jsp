@@ -26,7 +26,7 @@
       </thead>
       <tbody>
       <tr>
-        <td>User Name</td>
+        <td>User Id</td>
         <td><input type="text" name="user_id" value="" /></td>
       </tr>
       <tr>
