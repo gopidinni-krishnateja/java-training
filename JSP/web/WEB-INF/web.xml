@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <servlet>
+        <description></description>
+        <display-name>Authentication</display-name>
+        <servlet-name>Authentication</servlet-name>
+        <servlet-class>com.jsp.example.Authentication</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Authentication</servlet-name>
+        <url-pattern>/authenticate</url-pattern>
+
+    </servlet-mapping>
+    <servlet>
+        <description></description>
+        <display-name>Registration</display-name>
+        <servlet-name>Registration</servlet-name>
+        <servlet-class>com.jsp.example.Registration</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Registration</servlet-name>
+        <url-pattern>/view</url-pattern>
+        <url-pattern>/registration</url-pattern>
+    </servlet-mapping>
+
+</web-app>
