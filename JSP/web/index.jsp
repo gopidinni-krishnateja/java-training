@@ -9,6 +9,12 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+    function register()
+  {
+    window.location='/registration.jsp';
+  }
+</script>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -34,8 +40,8 @@
         <td><input type="text" name="account_number" value="" /></td>
       </tr>
       <tr>
-        <td></td>
-        <td><input type="submit" value="authenticate" /></td>
+        <td><input type="button" value="Register" onclick="register()" /></td>
+        <td><input type="submit" value="Authenticate" /></td>
       </tr>
       </tbody>
     </table>

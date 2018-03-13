@@ -9,19 +9,10 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
-<form align="left" action="/logout.jsp" method="post">
-    <input  type="submit" value="Logout" />
-</form>
-<%
-    HttpSession sessio=request.getSession(false);
-    if(sessio!=null){
-        String name=(String)sessio.getAttribute("name");
 
-    }
-    else{
-        out.print("Please login first");
-        request.getRequestDispatcher("login.html").include(request, response);
-    }
+<%
+    HttpSession httpSession=request.getSession(false);
+
     String driverName = "org.postgresql.Driver";
     String connectionUrl = "jdbc:postgresql://localhost:5432/";
     String dbName = "postgres";
@@ -38,6 +29,10 @@
     Statement statement = null;
     ResultSet resultSet = null;
 %>
+<% if (httpSession.getAttribute("name") != null) { %>
+<form align="left" action="/logout.jsp" method="get">
+    <input  type="submit" value="Logout" />
+</form>
 <h2 align="center"><strong>Retrieve data from database in jsp</strong></h2>
 <table align="center" cellpadding="5" cellspacing="5" border="1">
     <tr>
@@ -73,11 +68,15 @@
 
     </tr>
 
-    <%
-            }
+    <%}
 
         } catch (Exception e) {
             e.printStackTrace();
         }
     %>
 </table>
+<% } else {
+    response.sendRedirect("/index.jsp");
+%>
+
+<% } %>
