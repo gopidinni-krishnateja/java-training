@@ -33,10 +33,10 @@ public class Registration extends HttpServlet {
         String bank_name = request.getParameter("bank_name");
         String ifsc_code = request.getParameter("ifsc_code");
         String customer_name = request.getParameter("customer_name");
-        String age = request.getParameter("age");
+        int age = Integer.parseInt(request.getParameter("age"));
         String account_number = request.getParameter("account_number");
-        String phone_number = request.getParameter("phone_number");
-        String city = request.getParameter("city_name");
+        int phone_number = Integer.parseInt(request.getParameter("phone_number"));
+        String city = request.getParameter("city");
         String user_id = request.getParameter("user_id");
         try {
             String sql =
@@ -46,9 +46,9 @@ public class Registration extends HttpServlet {
             pst.setString(1, bank_name);
             pst.setString(2, ifsc_code);
             pst.setString(3, customer_name);
-            pst.setString(4, age);
+            pst.setInt(4, age);
             pst.setString(5, account_number);
-            pst.setString(6, phone_number);
+            pst.setInt(6, phone_number);
             pst.setString(7, city);
             pst.setString(8, user_id);
             int numRowsChanged = pst.executeUpdate();
@@ -60,12 +60,13 @@ public class Registration extends HttpServlet {
         }
         catch (Exception e){
             System.out.println(e);
+            System.out.println("Exception Occured+ 2");
         }
         finally {
             try {
                 if (con != null) con.close();
             } catch (Exception  e){
-
+                System.out.println("Exception Occured");
             }
         }
     }

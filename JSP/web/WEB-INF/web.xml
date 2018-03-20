@@ -31,6 +31,7 @@
         <url-pattern>/authenticate</url-pattern>
         <url-pattern>/view</url-pattern>
         <url-pattern>/registration</url-pattern>
+        <url-pattern>/edit</url-pattern>
     </filter-mapping>
 
 </web-app>

@@ -7,6 +7,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="JSP" />
         </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$USER_HOME$/Documents/mockito-generator/lib/mockito-generator.jar" />
+        </element>
       </element>
     </root>
   </artifact>

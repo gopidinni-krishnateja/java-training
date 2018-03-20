@@ -9,7 +9,12 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
-
+<script>
+    function editMode(value) {
+       console.log("value",value);
+        window.location="/edit.jsp?userId='"+ value;
+    }
+</script>
 <%
     HttpSession httpSession=request.getSession(false);
 
@@ -39,6 +44,7 @@
 
     </tr>
     <tr bgcolor="#A52A2A">
+        <td><b>User Id</b></td>
         <td><b>Bank Name</b></td>
         <td><b>IFSC Code</b></td>
         <td><b>Customer Name</b></td>
@@ -57,14 +63,16 @@
             while(resultSet.next()){
     %>
     <tr bgcolor="#DEB887">
-
+        <td><%=resultSet.getString("user_id") %></td>
         <td><%=resultSet.getString("bank_name") %></td>
         <td><%=resultSet.getString("ifsc_code") %></td>
         <td><%=resultSet.getString("customer_name") %></td>
-        <td><%=resultSet.getString("age") %></td>
+        <td><%=resultSet.getInt("age") %></td>
         <td><%=resultSet.getString("account_number") %></td>
-        <td><%=resultSet.getString("phone_number") %></td>
+        <td><%=resultSet.getInt("phone_number") %></td>
         <td><%=resultSet.getString("city") %></td>
+        <td><input type="button" value="Edit" onclick="editMode(<%resultSet.getString("user_id");%>)"/> </td>
+        <td><input type="button" value="Delete" /> </td>
 
     </tr>
 
