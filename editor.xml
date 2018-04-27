@@ -4,6 +4,11 @@
     <option name="FONT_SCALE" value="1.25" />
   </component>
   <component name="EditorSettings">
+    <option name="languageBreadcrumbsMap">
+      <map>
+        <entry key="JAVA" value="true" />
+      </map>
+    </option>
     <option name="USE_SOFT_WRAPS" value="PREVIEW" />
   </component>
 </application>
