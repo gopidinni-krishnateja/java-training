@@ -22,6 +22,10 @@
           <option name="url" value="https://github.com/gopidinni-krishnateja/neet-spring.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/semanticbits/ind-consultancy-app.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="$USER_HOME$/Templates" />
@@ -30,6 +34,6 @@
     <option name="MIGRATED" value="true" />
   </component>
   <component name="VcsApplicationSettings">
-    <option name="PATCH_STORAGE_LOCATION" value="$USER_HOME$/Downloads" />
+    <option name="PATCH_STORAGE_LOCATION" value="$USER_HOME$/Documents/Desktop/Consultancy-Patches/search" />
   </component>
 </application>
