@@ -1,0 +1,14 @@
+<application>
+  <component name="SettingsState">
+    <option name="host" value="https://gitlab.com/krishnateja-gopidinni" />
+    <option name="token" value="zYwc7Me7bL6qyQmcP5Tq" />
+    <option name="servers">
+      <list>
+        <ServerDto>
+          <option name="host" value="https://gitlab.com/krishnateja-gopidinni" />
+          <option name="token" value="zYwc7Me7bL6qyQmcP5Tq" />
+        </ServerDto>
+      </list>
+    </option>
+  </component>
+</application>
